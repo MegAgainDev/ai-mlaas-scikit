@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Diabetic Assessment Tool{% endblock %}
+
+{% block head %} Diabetic Assessment Tool{% endblock %}
+
+{% block content %}
+
+<main>
+<!-- Info Section -->
+<section class="info-section">
+    <div class="info-desc">
+
+        <p class="textclr">Diabetes is a health condition in which body does not make good use of insulin released by pancreas, 
+        resulting in higher blood sugar levels. High blood sugar levels can cause complicated health issues like 
+        heart disease, kidney disease, and vision loss.</p>
+
+        <p class="textclr">According to Centers for Disease Control and Prevention, more than 37 million American adults have diabetes 
+          and about 1 in 5 people with diabetes don't know they have it.
+        </p>
+
+        <p class="textclr">This diabetes risk assessment is aimed at predicting early stage type-2 diabetes risk in
+            individuals of age 20-90.</p>
+
+        <p class="textclr">The assessment is easy, requires a few minutes to complete and provides you an instant prediction.</p>
+
+    </div>
+    
+    <button class="start-btn" type="button" onclick="window.location.href='{{ url_for('questions') }}';">Start Assessment</button>
+    
+  </section>
+
+  <!-- News Section -->
+  <section class="news-section">
+    <div>
+      <p class="news-sec-head textclr">Top Diabetic Health News <br>provided by News API</p>
+    </div>
+
+    <div>
+      <h3 id="news-title-header"></h3>
+    </div>
+
+    <div id="news-image" class="news">
+      <div id="news-author"></div>
+      <a href="" id="news-link"><p id="news-title"></p></a>
+    </div> 
+  </section>
+</main>
+ 
+
+<!-- JavaScript News API Reference-->
+<script type="text/javascript" src="{{ url_for('static',filename='script/script.js') }}"></script>
+
+{% endblock %}

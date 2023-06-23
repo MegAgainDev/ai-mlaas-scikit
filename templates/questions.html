@@ -1,0 +1,324 @@
+{% extends "base.html" %}
+
+{% block title %}Diabetes Risk Prediction Assessment{% endblock %}
+
+{% block head %}Diabetes Risk Prediction Assessment{% endblock %}
+
+{% block content %}
+
+<main class="login">
+
+  <!-- This form is using Bootstrap 5 Form Validation Class-->
+
+  <!-- Action is where the data is sent. In our case, predict page.
+  If action is omitted, it assumed to be the current page -->
+  <form action="{{ url_for('predict')}}" method="post" class="row g-3 needs-validation" novalidate>
+    <p class="question textclr">What is your age?</p>
+    <input class="form-control" type="number" name="Age" placeholder="Enter your age" id="validationFormCheck1"
+      required>
+    <div class="valid-feedback">
+      Looks good, Thank you!
+    </div>
+    <div class="invalid-feedback">
+      Please enter your name.
+    </div>
+
+    <p class="question textclr">What is your gender?</p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck2" name="Sex" value="1" required>
+      <label class="form-check-label" for="validationFormCheck2">Male</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck3" name="Sex" value="0" required>
+      <label class="form-check-label" for="validationFormCheck3">Female</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+
+    <p class="question read-more-q textclr">Do you suffer from Polyuria (Excessive Urine)?
+      <br class="read-more"><a
+        href="https://www.healthline.com/health/urination-excessive-volume#:~:text=Excessive%20urination%20volume%20(or%20polyuria,day%20is%20usually%20considered%20normal.">
+        Know more about Polyuria</a>
+    </p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck4" name="Polyuria" value="1" required>
+      <label class="form-check-label" for="validationFormCheck4">Yes</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="" id="validationFormCheck5" name="Polyuria" value="0" required>
+      <label class="form-check-label" for="validationFormCheck5">No</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+
+    <p class="question read-more-q textclr">Do you suffer from Polydipsia (Excessive Thirst)?
+      <br class="read-more"><a
+        href="https://www.webmd.com/diabetes/polydipsia-thirsty#:~:text=Drinking%20plenty%20of%20water%20will,of%20time%20in%20the%20bathroom.">
+        Know more about Polydipsia</a>
+    </p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck6" name="Polydipsia" value="1" required>
+      <label class="form-check-label" for="validationFormCheck6">Yes</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="" id="validationFormCheck7" name="Polydipsia" value="0" required>
+      <label class="form-check-label" for="validationFormCheck7">No</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+
+    <p class="question textclr">Have you noticed sudden weight loss in yourself?</p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck8" name="sudden weight loss" value="1" required>
+      <label class="form-check-label" for="validationFormCheck8">Yes</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="" id="validationFormCheck9" name="sudden weight loss" value="0" required>
+      <label class="form-check-label" for="validationFormCheck9">No</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+    <p class="question textclr">Do you feel weakness in your body throughout the day?</p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck10" name="weakness" value="1" required>
+      <label class="form-check-label" for="validationFormCheck10">Yes</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="" id="validationFormCheck11" name="weakness" value="0" required>
+      <label class="form-check-label" for="validationFormCheck11">No</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+    <p class="question textclr">Do you suffer from Polyphagia (Excessive Hunger)?
+      <br class="read-more"><a href="https://www.healthline.com/health/polyphagia">
+        Know more about Polyphagia</a>
+    </p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck12" name="Polyphagia" value="1" required>
+      <label class="form-check-label" for="validationFormCheck12">Yes</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="" id="validationFormCheck13" name="Polyphagia" value="0" required>
+      <label class="form-check-label" for="validationFormCheck13">No</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+
+    <p class="question textclr">Do you suffer from Genital Thrush (Yeast Infection)?
+      <br class="read-more"><a href="https://www.nhs.uk/conditions/thrush-in-men-and-women/">
+        Know more about Genital Thrush</a>
+    </p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck14" name="Genital thrush" value="1" required>
+      <label class="form-check-label" for="validationFormCheck14">Yes</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="" id="validationFormCheck15" name="Genital thrush" value="0" required>
+      <label class="form-check-label" for="validationFormCheck15">No</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+
+    <p class="question textclr">Do you suffer from blurred vision?</p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck16" name="visual blurring" value="1" required>
+      <label class="form-check-label" for="validationFormCheck16">Yes</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="" id="validationFormCheck17" name="visual blurring" value="0" required>
+      <label class="form-check-label" for="validationFormCheck17">No</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+    <p class="question textclr">Do you suffer from itching in your body?</p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck18" name="Itching" value="1" required>
+      <label class="form-check-label" for="validationFormCheck18">Yes</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="" id="validationFormCheck19" name="Itching" value="0" required>
+      <label class="form-check-label" for="validationFormCheck19">No</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+    <p class="question textclr">Have you noticed increased irritability/ agitation in yourself?</p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck20" name="Irritability" value="1" required>
+      <label class="form-check-label" for="validationFormCheck20">Yes</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="" id="validationFormCheck21" name="Irritability" value="0" required>
+      <label class="form-check-label" for="validationFormCheck21">No</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+    <p class="question textclr">Do your wounds take longer to heal?</p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck22" name="delayed healing" value="1" required>
+      <label class="form-check-label" for="validationFormCheck22">Yes</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="" id="validationFormCheck23" name="delayed healing" value="0" required>
+      <label class="form-check-label" for="validationFormCheck23">No</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+    <p class="question textclr">Do you suffer from Partial Paresis (Muscle Weakening)?
+      <br class="read-more"><a href="https://www.healthline.com/health/paresis#bottom-line">
+        Know more about Partial Paresis</a>
+    </p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck24" name="partial paresis" value="1" required>
+      <label class="form-check-label" for="validationFormCheck24">Yes</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="" id="validationFormCheck25" name="partial paresis" value="0" required>
+      <label class="form-check-label" for="validationFormCheck25">No</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+    <p class="question textclr">Do you suffer from Muscle Stiffness (Difficulty Moving)?
+      <br class="read-more"><a
+        href="https://www.osmosis.org/answers/muscle-stiffness#:~:text=What%20is%20muscle%20stiffness%3F,skeletal%2C%20cardiac%2C%20and%20smooth.">
+        Know more about Muscle Stiffness</a>
+    </p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck26" name="muscle stiffness" value="1" required>
+      <label class="form-check-label" for="validationFormCheck26">Yes</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="" id="validationFormCheck27" name="muscle stiffness" value="0" required>
+      <label class="form-check-label" for="validationFormCheck27">No</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+
+    <p class="question textclr">Do you suffer from Hair Loss?</p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck28" name="Alopecia" value="1" required>
+      <label class="form-check-label" for="validationFormCheck28">Yes</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="" id="validationFormCheck29" name="Alopecia" value="0" required>
+      <label class="form-check-label" for="validationFormCheck29">No</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+    <p class="question textclr">Are you obese?</p>
+    <div class="form-check">
+      <input type="radio" class="" id="validationFormCheck30" name="Obesity" value="1" required>
+      <label class="form-check-label" for="validationFormCheck30">Yes</label>
+    </div>
+    <div class="form-check mb-3">
+      <input type="radio" class="" id="validationFormCheck31" name="Obesity" value="0" required>
+      <label class="form-check-label" for="validationFormCheck31">No</label>
+      <div class="valid-feedback">
+        Thank you!
+      </div>
+      <div class="invalid-feedback">
+        Please make a selection.
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Get Results</button>
+
+    <!-- Bootstrap Validation JavaScript-->
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+      })()
+
+    </script>
+
+  </form>
+</main>
+
+
+{% endblock %}
