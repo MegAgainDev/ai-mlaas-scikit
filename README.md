@@ -31,4 +31,4 @@ The concept was to create an app where users can answer a few health related que
 - Live Site: [Diabetes Risk Assessment](http://MegAgaindev.pythonanywhere.com/)
 
 ## Updates
-Will be provided to improve functionality and user interface.
+Updates Will be provided to improve functionality and user interface as changes are made.
