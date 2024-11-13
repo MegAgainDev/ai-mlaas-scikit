@@ -1,4 +1,4 @@
-# [Diabetes Risk Assessment](https://github.com/MegAgainDev/mlaas/riskassesment/db/)
+# [AI/ML Diabetes Risk Assessment](https://github.com/MegAgainDev/mlaas/riskassesment/db/)
 
 ## Description
 In this demonstration, I will train a model starting from a CSV datasource.  This model will predict wellness base on your age and specific health conditions.
