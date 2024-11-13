@@ -1,7 +1,7 @@
 # [Diabetes Risk Assessment](https://github.com/MegAgainDev/mlaas/riskassesment/db/)
 
 ## Description
-The concept was to create an app where users can answer a few health related questions and get their diabetes risk predicted based on the answers they provide.
+In this demonstration, I will train a model starting from a CSV datasource.  This model will predict wellness base on your age and specific health conditions. The results will display with recommendations and next steps.  From the [Diabetes Risk Assessment home page](http://MegAgaindev.pythonanywhere.com/), this web app pulls diabetic data and images from an external health and wellness API website: [News API](http://Newsapi.org)
 
 ## Technologies Used
 ![PYTHON](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
