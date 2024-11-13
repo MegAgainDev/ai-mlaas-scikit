@@ -1,7 +1,13 @@
 # [Diabetes Risk Assessment](https://github.com/MegAgainDev/mlaas/riskassesment/db/)
 
 ## Description
-In this demonstration, I will train a model starting from a CSV datasource.  This model will predict wellness base on your age and specific health conditions. The results will display with recommendations and next steps.  From the [Diabetes Risk Assessment home page](http://MegAgaindev.pythonanywhere.com/), this web app pulls diabetic data and images from an external health and wellness API website: [News API](http://Newsapi.org)
+In this demonstration, I will train a model starting from a CSV datasource.  This model will predict wellness base on your age and specific health conditions.
+
+### Home Page
+From the [Diabetes Risk Assessment home page](https://MegAgaindev.pythonanywhere.com/), this web app pulls diabetic data and images from an external health and wellness API website: [News API](http://Newsapi.org)
+
+### Risk Prediction Questionnaire
+The data will be capture by completing the [Diabetes Risk Prediction Questions](https://megagaindev.pythonanywhere.com/questions).  The results will display with recommendations and next steps.  
 
 ## Technologies Used
 ![PYTHON](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
@@ -28,7 +34,7 @@ In this demonstration, I will train a model starting from a CSV datasource.  Thi
 - GitHub: [diabetes_risk_assessment](https://github.com/MegAgainDev/ai-mlaas-scikit/)
 
 ## View Live
-- Live Site: [Diabetes Risk Assessment](http://MegAgaindev.pythonanywhere.com/)
+- Live Site: [Diabetes Risk Assessment](https://MegAgaindev.pythonanywhere.com/)
 
 ## Updates
 Updates Will be provided to improve functionality and user interface as changes are made.
