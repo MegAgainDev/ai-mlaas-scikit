@@ -16,7 +16,7 @@ The data will be capture by completing the [Diabetes Risk Prediction Questions](
 ![BOOTSTRAP](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 ![JAVASCRIPT BADGE](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![FLASK BADGE](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![Sci-Kit](https://img.shields.io/badge/Scikit-blue)
+![SCIKIT BADGE](https://img.shields.io/badge/scikit-3670A0?style=for-the-badge&logo=scikit&logoColor=blue)
 ![GIT BADGE](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
 ![GITHUB BADGE](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 
